@@ -16,7 +16,7 @@ mean(cuales)
 
 
 # Teorema del Límite Central
-
+rm(base)
 mu <- 200
 sigma <- 10
 n <- 50
@@ -32,9 +32,16 @@ for (i in 1:muestras) {
 }
 colnames(base) <- c("x_i", paste0(rep("muestra", muestras),1:muestras))
 
+medias <- 1:muestras
+varianzas <- 1:muestras
+
+for (i in 1:muestras) {
+        medias[i] <- mean(base[, i+1])
+        varianzas[i] <- var[, i+1]
+}
+
 
 head(base)
-rm(base)
 
 
 # Otra perspectiva
@@ -63,3 +70,5 @@ expo <- rexp(simulaciones, 1)
 
 a <- density(expo)
 plot(a)
+
+
