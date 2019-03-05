@@ -17,13 +17,13 @@ mean(cuales)
 
 # Teorema del Límite Central
 rm(base)
-mu <- 200
-sigma <- 10
+mu <- 0
+sigma <- 1
 n <- 50
 universo <- rnorm(100000, mu, sigma)
 variabless <- 1:n
 base <- 1:n
-muestras <- 100
+muestras <- 1000
 
         
 for (i in 1:muestras) {
@@ -37,11 +37,16 @@ varianzas <- 1:muestras
 
 for (i in 1:muestras) {
         medias[i] <- mean(base[, i+1])
-        varianzas[i] <- var[, i+1]
+        varianzas[i] <- var(base[, i+1])
 }
 
 
+chi_2 <- (n-1)*varianzas/sigma
+plot(density(medias))
+plot(density(chi_2))
+
 head(base)
+
 
 
 # Otra perspectiva
