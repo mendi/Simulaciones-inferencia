@@ -45,15 +45,13 @@ chi_2 <- (n-1)*varianzas/sigma
 plot(density(medias))
 plot(density(chi_2))
 
-head(base)
-
 
 
 # Otra perspectiva
 
 simulaciones <- 10000
 medias <- 1:simulaciones
-desvEst <- medias
+desvEst <- 1:simulaciones
 
 for (i in 1:simulaciones) {
         medias[i] <- mean(rnorm(simulaciones, mu, sigma))
