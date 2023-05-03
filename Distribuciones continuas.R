@@ -1,6 +1,6 @@
 # Falcao anota 5 goles cada 4 partidos. ¿Cuál es la probabilidad de que no anote goles en los
 # próximos 2 partidos?
-
+# Primer cambio
 x <- seq(0, 10, by = 0.1)
 alpha <- 5/4
 

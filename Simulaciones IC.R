@@ -1,3 +1,4 @@
+# Tercer cambio
 N <- 500000
 mu_t <- 50
 sigma_t <- 20

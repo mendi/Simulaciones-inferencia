@@ -1,5 +1,5 @@
 # Distribución normal
-
+# Segundo cambio
 muestra <- rnorm(100000, 200, 10)
 
 a <- density(muestra)
